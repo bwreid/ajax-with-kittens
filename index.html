@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>AJAX with Kittens</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid bg-light text-dark">
-      <div class="container">
-        <h1 class="display-3">AJAX with Kittens</h1>
-        <p class="lead">Cats cats cats cats cats cats cats cats</p>
-        <p class="lead">
-          <button id="posts-create" class="btn btn-primary">Create a New Kitten</button>
-        </p>
+
+<head>
+  <meta charset="utf-8">
+  <title>AJAX with Kittens</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="app.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid bg-light text-dark">
+    <div class="container">
+      <h1 class="display-3">AJAX with Kittens</h1>
+      <p class="lead">Cats cats cats cats cats cats cats cats</p>
+      <p class="lead">
+        <button id="posts-create" class="btn btn-primary">Create a New Kitten</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form id="form" class="mb-4">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="cat name" placeholder="Enter cat name">
+          </div>
+          <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+          <p id="alert"></p>
+        </form>
       </div>
     </div>
-  </body>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>CATS</h3>
+        <ul id="cats">
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
